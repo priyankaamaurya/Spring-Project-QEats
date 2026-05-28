@@ -2,17 +2,15 @@ package com.jsp.qeats.controller;
 
 import com.jsp.qeats.entity.User;
 import com.jsp.qeats.service.AuthService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/auth")
 public class AuthController {
 
     private final AuthService authService;
-
-    public AuthController(AuthService authService) {
-        this.authService = authService;
-    }
 
     // Register
     @PostMapping("/register")
